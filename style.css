@@ -1,48 +1,119 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background: #f4f4f4;
-    color: #333;
+/* Estilos Generales */
+* {
     margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
+body {
+    font-family: 'Arial', sans-serif;
+    color: #fff;
+    background-color: #000;
+}
+
+/* Barra de navegación */
 header {
-    background: #0073e6;
-    color: white;
-    padding: 40px 10px;
+    background-color: #fff;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 10px 0;
+    z-index: 10;
 }
 
-h1, h2 {
+nav ul {
+    list-style-type: none;
+    text-align: center;
+}
+
+nav ul li {
+    display: inline-block;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #007bff;
+    color: #fff;
+}
+
+/* Sección de presentación */
+#home {
+    height: 100vh;
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding-top: 100px; /* Para evitar que se cubra con el header fijo */
+}
+
+#home h1 {
+    font-size: 3em;
     margin-bottom: 10px;
 }
 
+#home p {
+    font-size: 1.5em;
+}
+
+/* Secciones */
 section {
-    padding: 40px 20px;
+    padding: 50px 20px;
+    margin-top: 50px; /* Para no sobreponerse al header */
 }
 
-.project {
-    background: white;
-    padding: 20px;
-    margin: 20px auto;
-    width: 80%;
-    max-width: 500px;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.content {
+    text-align: center;
 }
 
-.project img {
-    width: 100%;
-    border-radius: 10px;
+#about {
+    background-color: #111;
+}
+#about p {
+    margin-bottom: 20px; /* Aumenta el espacio entre párrafos */
+    line-height: 2; /* Aumenta el espaciado entre líneas dentro de un párrafo */
 }
 
-a {
-    color: #0073e6;
-    text-decoration: none;
-    font-weight: bold;
+#projects {
+    background-color: #222;
 }
 
+#contact {
+    background-color: #333;
+}
+
+/* Footer */
 footer {
-    background: #0073e6;
-    color: white;
-    padding: 10px;
+    background-color: #222;
+    color: #bbb;
+    text-align: center;
+    padding: 20px;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+}
+
+/* Responsividad */
+@media (max-width: 768px) {
+    nav ul li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    #home h1 {
+        font-size: 2em;
+    }
+
+    #home p {
+        font-size: 1.2em;
+    }
 }
