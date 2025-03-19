@@ -89,6 +89,14 @@ section {
 
 #contact {
     background-color: #333;
+    text-align: center;
+    margin-bottom: 20px; /* Aumenta el espacio entre párrafos */
+    line-height: 2; 
+}
+
+#contact a{
+    color:aqua;
+
 }
 
 /* Footer */
