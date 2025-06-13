@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Predicción de Días de Demora en Pagos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Barra de navegación -->
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="#about">Sobre el Proyecto</a></li>
+                <li><a href="#details">Detalles</a></li>
+                <li><a href="#results">Resultados</a></li>
+                <li><a href="#contact">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Sección de Presentación -->
+    <section id="home">
+        <div class="intro">
+            <h1>Predicción de Días de Demora en Pagos</h1>
+            <p>Modelo de Machine Learning para estimar el desvío de pago en días sobre facturas emitidas en contextos B2B.</p>
+        </div>
+    </section>
+
+    <!-- Sobre el Proyecto -->
+    <section id="about">
+        <div class="content">
+            <h2>Sobre el Proyecto</h2>
+            <p>Este proyecto tiene como finalidad predecir el desvío en días entre la fecha de vencimiento y la fecha real de pago de una factura (variable <code>delay_days</code>). A partir de una base con miles de operaciones históricas entre empresas, se construyó un modelo para asistir la toma de decisiones financieras.</p>
+            <p>El dataset original incluía información de fechas clave (emisión, vencimiento, pago), montos, tipo de documento, empresa compradora y emisora, entre otros. Se aplicó un proceso exhaustivo de preprocesamiento y selección de variables para asegurar calidad en el entrenamiento.</p>
+        </div>
+    </section>
+
+    <!-- Detalles Técnicos -->
+    <section id="details">
+        <div class="content">
+            <h2>Detalles Técnicos</h2>
+            <p>Se realizó una función <code>prepare_data()</code> que automatiza la limpieza y transformación del dataset. Las principales tareas incluyeron:</p>
+            <ul>
+                <li>Conversión de columnas de fecha a formato datetime.</li>
+                <li>Extracción de variables temporales como mes y día de la semana.</li>
+                <li>Eliminación de columnas irrelevantes o de alta cardinalidad.</li>
+                <li>One-hot encoding para variables categóricas.</li>
+                <li>Imputación de valores nulos y escalado de variables numéricas.</li>
+                <li>Eliminación de columnas constantes con varianza cero.</li>
+            </ul>
+            <p>El modelo final fue entrenado utilizando una red neuronal densa (fully connected) desarrollada con TensorFlow/Keras. Se utilizó una división 80/20 para entrenamiento y validación, y la métrica principal fue el MAE (Mean Absolute Error), que alcanzó una media cercana a 3.4 días, indicando un buen rendimiento general del modelo.</p>
+        </div>
+    </section>
+
+    <!-- Resultados del Modelo -->
+    <section id="results">
+        <div class="content">
+            <h2>Resultados y Evaluación</h2>
+            <p>El desempeño del modelo se visualiza en la siguiente curva de error:</p>
+            <img src="mae.png" alt="Curva de evolución del MAE" style="max-width: 100%; height: auto;">
+            <p><strong>Curva de evolución del MAE:</strong> El modelo fue entrenado para predecir el desvío en días de cobro (<code>delay_days</code>). La métrica MAE se mantuvo estable a lo largo de las épocas, convergiendo alrededor de <strong>3.4 días</strong>, tanto en el conjunto de entrenamiento como en validación. Esto sugiere que el modelo generaliza adecuadamente, sin signos evidentes de sobreajuste.</p>
+
+            <h3>Histograma de Errores</h3>
+            <img src="histerror.png" alt="Histograma de errores de predicción" style="max-width: 100%; height: auto;">
+            <p><strong>Histograma de errores de predicción:</strong> Más del <strong>80 %</strong> de las predicciones caen dentro de un rango de <strong>±5 días</strong> de error, lo que demuestra buena precisión. Sin embargo, existen algunos <em>outliers</em> con errores superiores a 20 días. Esto podría mejorarse aplicando ingeniería de variables adicionales o segmentando clientes atípicos.</p>
+
+            <p>El modelo logra anticipar con bastante precisión el comportamiento de pago de las facturas, lo cual representa un insumo valioso para la evaluación del riesgo y la planificación financiera.</p>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contact">
+        <h2>📫 Contacto</h2>
+        <p><a href="mailto:marcos.berruhet@gmail.com">marcos.berruhet@gmail.com</a></p>
+        <p><a href="https://www.linkedin.com/in/marcos-berruhet-539292214/" target="_blank">LinkedIn</a></p>
+        <p><a href="https://github.com/marcosberruhet" target="_blank">GitHub</a></p>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Marcos Berruhet. Todos los derechos reservados.</p>
+    </footer>
+</body>
+</html>
