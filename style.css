@@ -61,7 +61,24 @@ nav ul li a:hover {
     background: linear-gradient(to right, #f8f9fa, #e9ecef);
 }
 
+#home-delay {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-top: 80px;
+    text-align: center;
+    background: linear-gradient(to right, #f8f9fa, #e9ecef);
+}
+
 #home h1 {
+    font-size: 3em;
+    margin-bottom: 15px;
+    color: #007bff;
+}
+
+#home-delay h1 {
     font-size: 3em;
     margin-bottom: 15px;
     color: #007bff;
@@ -70,6 +87,11 @@ nav ul li a:hover {
 #home p {
     font-size: 1.4em;
     max-width: 700px;
+}
+
+#home-delay p {
+    font-size: 1.4em;
+    max-width: 900px;
 }
 
 /* Secciones */

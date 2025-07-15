@@ -21,7 +21,7 @@
     </header>
 
     <!-- Sección de Presentación -->
-    <section id="home">
+    <section id="home-delay">
         <div class="intro">
             <h1>Predicción de Días de Demora en Pagos</h1>
             <p>Modelo de Machine Learning para estimar el desvío de pago en días sobre facturas emitidas en contextos B2B.</p>
@@ -29,7 +29,7 @@
     </section>
 
     <!-- Sobre el Proyecto -->
-    <section id="about">
+    <section id="about-delay">
         <div class="content">
             <h2>Sobre el Proyecto</h2>
             <p>Este proyecto tiene como finalidad predecir el desvío en días entre la fecha de vencimiento y la fecha real de pago de una factura (variable <code>delay_days</code>). A partir de una base con miles de operaciones históricas entre empresas, se construyó un modelo para asistir la toma de decisiones financieras.</p>
@@ -67,6 +67,9 @@
             <p><strong>Histograma de errores de predicción:</strong> Más del <strong>80 %</strong> de las predicciones caen dentro de un rango de <strong>±5 días</strong> de error, lo que demuestra buena precisión. Sin embargo, existen algunos <em>outliers</em> con errores superiores a 20 días. Esto podría mejorarse aplicando ingeniería de variables adicionales o segmentando clientes atípicos.</p>
 
             <p>El modelo logra anticipar con bastante precisión el comportamiento de pago de las facturas, lo cual representa un insumo valioso para la evaluación del riesgo y la planificación financiera.</p>
+            <p>📎 Puedes ver el código fuente en formato notebook en el siguiente enlace:  
+            <a href="https://github.com/marcosberruhet/delay-pred/blob/main/main.ipynb" target="_blank">Ver notebook en GitHub</a></p>
+
         </div>
     </section>
 
