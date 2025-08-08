@@ -5,72 +5,318 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcos Berruhet · Data Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-    <!-- Barra de navegación -->
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#about">Sobre mí</a></li>
-                <li><a href="#projects">Proyectos</a></li>
-                <li><a href="#contact">Contacto</a></li>
-            </ul>
+     <!-- Barra de navegación  -->
+    <header class="header">
+        <nav class="nav">
+            <div class="nav-container">
+                <div class="nav-brand">
+                    <a href="#home">MB</a>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#about" class="nav-link">Sobre mí</a></li>
+                    <li><a href="#projects" class="nav-link">Proyectos</a></li>
+                    <li><a href="#contact" class="nav-link">Contacto</a></li>
+                </ul>
+                <button class="nav-toggle" aria-label="Toggle navigation">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
         </nav>
     </header>
 
     <main>
-        <!-- Sección de presentación -->
-        <section id="home">
-            <div class="intro">
-                <h1>Marcos Berruhet</h1>
-                <p>Data Portfolio</p>
-            </div>
-        </section>
-
-        <!-- Sobre mí -->
-        <section id="about">
-            <div class="content">
-                <h2>👤 Perfil</h2>
-                <p>Estudiante de Ingeniería en Sistemas con experiencia inicial en análisis de datos. He colaborado en distintos sectores utilizando herramientas como Python, Power Query, Excel y TensorFlow.</p>
-                <p>Participé en un proyecto de simulación de procesos productivos. Me interesa especialmente la Ciencia de Datos y la Inteligencia Artificial aplicada a negocios.</p>
-            </div>
-        </section>
-
-        <!-- Proyectos -->
-        <section id="projects">
-            <div class="content">
-                <h2>🚀 Proyectos</h2>
-
-                <div class="project">
-                    <h3>📊 Predicción de Días de Delay en Pagos</h3>
-                    <p>Modelo de regresión basado en redes neuronales para estimar el retraso en días de cobro de facturas, aplicando técnicas de machine learning sobre datos históricos.</p>
-                    <a href="delaydays-prediction.html" class="read-more">Ver más</a>
+         <!-- Sección de presentación  -->
+        <section id="home" class="hero">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1 class="hero-title">
+                        Hola, soy <span class="highlight">Marcos Berruhet</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        Estudiante de Ingeniería en Sistemas
+                    </p>
+                    <p class="hero-description">
+                        Me gusta transformar datos en insights utilizando herramientas de análisis avanzado.
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary">Ver Proyectos</a>
+                        <a href="#contact" class="btn btn-secondary">Contactar</a>
+                    </div>
                 </div>
-
-                <!-- Proyecto futuro 
-                <div class="project">
-                    <h3>📈 Análisis de Ventas</h3>
-                    <p>Exploración y modelado de datos comerciales para identificar patrones de compra y optimizar estrategias de negocio.</p>
-                    <a href="ventas-analisis.html" class="read-more">Ver más</a>
+                <div class="hero-visual">
+                    <div class="floating-card">
+                        <div class="card-content">
+                            <div class="data-viz">
+                                <div class="chart-bar" style="height: 60%"></div>
+                                <div class="chart-bar" style="height: 80%"></div>
+                                <div class="chart-bar" style="height: 45%"></div>
+                                <div class="chart-bar" style="height: 90%"></div>
+                                <div class="chart-bar" style="height: 70%"></div>
+                            </div>
+                            <p class="card-label">Data Analytics</p>
+                        </div>
+                    </div>
                 </div>
-                -->
             </div>
         </section>
 
-        <!-- Contacto -->
-        <section id="contact">
-            <div class="content">
-                <h2>📫 Contacto</h2>
-                <p>✉️ <a href="mailto:marcos.berruhet@gmail.com">marcos.berruhet@gmail.com</a></p>
-                <p>💼 <a href="https://www.linkedin.com/in/marcos-berruhet-539292214/" target="_blank">LinkedIn</a></p>
-                <p>💻 <a href="https://github.com/marcosberruhet" target="_blank">GitHub</a></p>
+         <!-- Sobre mí  -->
+        <section id="about" class="about">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Sobre mí</h2>
+                    <p class="section-subtitle">
+                        Un poco de la experiencia en el mundo de los datos
+                    </p>
+                </div>
+                
+                <div class="about-content">
+                    <div class="about-text">
+                        <div class="about-card">
+                            <div class="card-icon">👨‍💻</div>
+                            <h3>Perfil Profesional</h3>
+                            <p>
+                                Estudiante de Ingeniería en Sistemas con experiencia inicial en análisis de datos. 
+                                He colaborado en distintos sectores utilizando herramientas como Python, Power Query, 
+                                Excel y TensorFlow.
+                            </p>
+                        </div>
+                        
+                        <div class="about-card">
+                            <div class="card-icon">🚀</div>
+                            <h3>Experiencia</h3>
+                            <p>
+                                Participé en un proyecto de simulación de procesos productivos. Me interesa 
+                                especialmente la Ciencia de Datos y la Inteligencia Artificial aplicada a negocios.
+                            </p>
+                        </div>
+                    </div>
+                    
+                    <div class="skills">
+                        <h3>Tecnologías</h3>
+                        <div class="skills-grid">
+                            <div class="skill-item">
+                                <span class="skill-name">Python</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 85%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">TensorFlow</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 75%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Power Query</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 80%"></div>
+                                </div>
+                            </div>
+                            <div class="skill-item">
+                                <span class="skill-name">Excel</span>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="width: 90%"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+         <!-- Proyectos  -->
+        <section id="projects" class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Proyectos</h2>
+                    <p class="section-subtitle">
+                        Proyectos en análisis de datos
+                    </p>
+                </div>
+                
+                <div class="projects-grid">
+                    <article class="project-card featured">
+                        <div class="project-header">
+                            <div class="project-icon">📊</div>
+                            <div class="project-badge">Destacado</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Predicción de Días de Delay en Pagos</h3>
+                            <p class="project-description">
+                                Modelo de regresión basado en redes neuronales para estimar el retraso 
+                                en días de cobro de facturas, aplicando técnicas de machine learning 
+                                sobre datos históricos.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">TensorFlow</span>
+                                <span class="tag">Neural Networks</span>
+                                <span class="tag">Regression</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <a href="delaydays-prediction.html" class="project-link">
+                                Ver Proyecto
+                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M7 17L17 7M17 7H7M17 7V17"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </article>
+                    
+                     <!-- Proyecto placeholder para futuro  -->
+                    <article class="project-card coming-soon">
+                        <div class="project-header">
+                            <div class="project-icon">📈</div>
+                            <div class="project-badge coming-soon-badge">Próximamente</div>
+                        </div>
+                        <div class="project-content">
+                            <h3 class="project-title">Análisis de Ventas</h3>
+                            <p class="project-description">
+                                Exploración y modelado de datos comerciales para identificar patrones 
+                                de compra y optimizar estrategias de negocio.
+                            </p>
+                            <div class="project-tags">
+                                <span class="tag">Python</span>
+                                <span class="tag">Pandas</span>
+                                <span class="tag">Visualization</span>
+                            </div>
+                        </div>
+                        <div class="project-footer">
+                            <span class="project-link disabled">
+                                En desarrollo...
+                            </span>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+         <!-- Contacto  -->
+        <section id="contact" class="contact">
+            <div class="container">
+                <div class="section-header">
+                    <h2 class="section-title">Conectemos</h2>
+                    <p class="section-subtitle">
+                        ##
+                    </p>
+                </div>
+                
+                <div class="contact-content">
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>Email</h3>
+                                <a href="mailto:marcos.berruhet@gmail.com">marcos.berruhet@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect x="2" y="9" width="4" height="12"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>LinkedIn</h3>
+                                <a href="https://www.linkedin.com/in/marcos-berruhet-539292214/" target="_blank">
+                                    Marcos Berruhet
+                                </a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <h3>GitHub</h3>
+                                <a href="https://github.com/marcosberruhet" target="_blank">
+                                    @marcosberruhet
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- Footer -->
-    <footer>
-        <p>© 2025 Marcos Berruhet. Todos los derechos reservados.</p>
+     Footer 
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2025 Marcos Berruhet. Todos los derechos reservados.</p>
+        </div>
     </footer>
+
+    <script>
+        // Mobile navigation toggle
+        const navToggle = document.querySelector('.nav-toggle');
+        const navMenu = document.querySelector('.nav-menu');
+
+        navToggle.addEventListener('click', () => {
+            navMenu.classList.toggle('active');
+            navToggle.classList.toggle('active');
+        });
+
+        // Close mobile menu when clicking on a link
+        document.querySelectorAll('.nav-link').forEach(link => {
+            link.addEventListener('click', () => {
+                navMenu.classList.remove('active');
+                navToggle.classList.remove('active');
+            });
+        });
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Intersection Observer for animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('animate-in');
+                }
+            });
+        }, observerOptions);
+
+        // Observe all sections
+        document.querySelectorAll('section').forEach(section => {
+            observer.observe(section);
+        });
+    </script>
 </body>
 </html>
